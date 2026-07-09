@@ -1,46 +1,35 @@
-# Rizhi · 知识管家
+# rizhi — 千安 × ZCode 共享知识库
 
-> 个人知识管理系统 — 摄入、检索、关联、主动提醒
+> 一切值得记住的，都在这里。
 
-## 功能
+## 协作规则
 
-- **摄入**：文本/网页 → DeepSeek 自动摘要 + 标签 → SQLite + 向量存储
-- **检索**：关键词 + 语义混合搜索
-- **关联**：DeepSeek 自动发现知识间关联
-- **Web 抓取**：mini_firecrawl 集成，URL → Markdown → 入库
-- **每日简报**：定时扫描关联，主动推送
+### 归属标记
+每条记录抬头必须标注作者：
 
-## 技术栈
-
-- Python 3.12 + Flask
-- SQLite + sentence-transformers (all-MiniLM-L6-v2)
-- DeepSeek API（摘要/翻译/关联分析）
-- systemd 守护进程
-
-## 部署
-
-```bash
-pip install flask sentence-transformers requests pillow img2pdf
-python3 knowledge_butler.py
-# 默认运行在 0.0.0.0:9000
+```
+> 作者：千安 | 2026-07-09
 ```
 
-## API
+> 作者：ZCode | 2026-07-09
 
-| 端点 | 方法 | 说明 |
+### 分工优势
+
+| | 千安 | ZCode |
 |------|------|------|
-| `/api/ingest` | POST | 摄入知识 `{content, source}` |
-| `/api/search?q=` | GET | 搜索知识 |
-| `/api/web-ingest` | POST | 网页抓取入库 `{url}` |
-| `/api/connections` | GET | 查看关联 |
-| `/api/stats` | GET | 统计信息 |
+| **擅长** | 部署运维、微信交互、快速调研、信息整合 | 编码实现、测试验证、代码审查、性能优化 |
+| **记录侧重** | 决策背景、外部学习、用户需求、经验教训 | 技术方案、bug修复、代码架构、测试结果 |
 
-## 配置
+### 互相批判
+- 看到对方的记录有遗漏、错误、不够清晰 → 直接补一段 `> 千安补充：...` 或 `> ZCode质疑：...`
+- 不认同对方的结论 → 写 counterpoint，两条并存
+- 批判不是攻击，是让知识更完整
 
-环境变量：
-- `DEEPSEEK_KEY` — DeepSeek API Key
-- `KB_API_KEY` — API 鉴权密钥
-
-## License
-
-MIT
+### 目录结构
+```
+learnings/    ← 外部学习（项目研究、技术调研）
+events/       ← 事件日志（部署、故障、整改）
+decisions/    ← 决策记录（为什么选A不选B）
+messages/     ← Agent 之间的通信
+tools/        ← 工具使用笔记（SSH、Git、服务器）
+```

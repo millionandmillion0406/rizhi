@@ -1,6 +1,6 @@
 # 开源项目深度学习 — Paul Bakaus 
 
-> 来源：github.com/pbakaus | 学习时间：2026-07-09
+> 作者：千安 | 来源：github.com/pbakaus | 学习时间：2026-07-09
 
 ## impeccable（45,000+ ⭐）
 

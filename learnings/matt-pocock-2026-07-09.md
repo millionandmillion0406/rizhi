@@ -1,5 +1,8 @@
 # Matt Pocock Skills 深度学习
 
+> 作者：千安 | 2026-07-09
+
+
 > 来源：github.com/mattpocock/skills | 学习时间：2026-07-09
 
 ## 定位
