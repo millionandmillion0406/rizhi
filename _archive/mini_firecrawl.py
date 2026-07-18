@@ -1,7 +1,7 @@
 import paramiko,socket,time
 a=socket.getaddrinfo("118.89.111.224",22,2,1)[0][4]
 s=socket.socket(2,1);s.settimeout(8);s.connect(a)
-t=paramiko.Transport(s);t.start_client();t.auth_password("ubuntu","123456Ab")
+t=paramiko.Transport(s);t.start_client();t.auth_password("ubuntu","YOUR_PASSWORD")
 
 # Install lightweight scraper
 c=t.open_session()
