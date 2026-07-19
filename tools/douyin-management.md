@@ -48,8 +48,18 @@ for w in works:
 ## 抖音官方开发者平台
 
 - 平台: https://open.douyin.com
-- 状态: 个人开发者认证审核中
-- 认证通过后可合规调用官方API发布视频
+- 状态: ✅ **已认证为超级管理员**
+- AppID: `tt8ddefb6313bba56701`
+- 凭证: 存于 `secure_env.sh`（DY_APP_ID / DY_APP_SECRET）
+- Token端点: `https://developer.toutiao.com/api/apps/v2/token`
+- Token类型: 小程序服务端API Token（有效期2小时）
+- RSA私钥: 存于 `id_rsa_key`（用于接口签名/Webhook验证）
+
+### 当前可用能力（小程序Token级别）
+- ✅ 小程序登录（jscode2session）
+- ✅ 内容安全审核
+- ✅ 模板消息
+- ❌ 用户视频数据（需用户OAuth授权）
 
 ## 账号信息
 
