@@ -11,18 +11,18 @@
 | IP | 118.89.111.224 |
 | 系统 | Ubuntu 24.04 |
 | 用户 | ubuntu |
-| 密码 | 123456Ab |
+| 密码 | 见 secure_env.sh |
 | 配置 | 4核 3.6GB 59GB |
 | 到期 | 2027年3月 |
 | 用途 | 千安 + 桥梁 + 咏明大药房网页 |
 
-### SSH 登录
+### 登录方式
+
+SSH（密码见 secure_env.sh）：
 
 ```bash
 ssh ubuntu@118.89.111.224
 ```
-
-### 登录后操作
 
 ```bash
 # 查看服务状态
@@ -57,17 +57,17 @@ tail -f /var/log/nginx/access.log
 | IP | 124.222.63.185 |
 | 系统 | Ubuntu 24.04 |
 | 用户 | ubuntu |
-| 密码 | 123456Ab |
+| 密码 | 见 secure_env.sh |
 | 配置 | 4核 16GB 217GB |
 | 用途 | 渗透工具链 + JuiceShop靶场 |
 
-### SSH 登录
+### 登录方式
+
+SSH（密码见 secure_env.sh）：
 
 ```bash
 ssh ubuntu@124.222.63.185
 ```
-
-### 已安装工具
 
 ```bash
 # 渗透工具
